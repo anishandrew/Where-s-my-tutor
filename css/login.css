@@ -1,0 +1,100 @@
+#php_header{
+	width:10%;
+	height:20%;
+	display: inline-block;
+	float:left;
+	box-shadow: 10px 10px 5px #4D4D4D;
+    }
+
+.header{
+	border:1px solid blue;
+	padding:7px;
+	background:#FF9966;
+	background: -webkit-linear-gradient(to left,white,#FF9966);
+	background: -o-linear-gradient(to left,white,#FF9966);
+	background: -moz-linear-gradient(to left,white,#FF9966);
+	background:linear-gradient(to left,white,#FF9966);
+	border-radius:10px;
+	box-shadow: 10px 10px 5px #4D4D4D;
+	text-shadow: 2px 2px #4D4D4D;
+}
+
+#ultra{
+	font-size:14px;
+	font-family:Aerial;  
+	} 
+
+figure {
+    text-align: justify;
+}
+
+figure img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+} 
+
+section{
+	display:flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+}
+
+.main{
+	display:flex;
+}
+.main>.login{
+	order:1;
+	flex:1;
+	width:20%;
+	border:1px solid black;
+	padding:7px;
+	height:15%;
+	border-radius:2px;
+	margin:2px;
+}
+
+.main>.visible{
+	order:2;
+	flex:3;
+	width:50%;
+	font-size:20px;
+	border:1px solid black;
+	padding:10px;
+	margin:2px;
+	overflow:scroll;
+}
+
+.main>.link{
+	order:3;
+	flex:1;
+	font-size:20px;
+	height:28%;
+	width:47%;
+	margin:2px;
+	border:1px solid black;
+}
+
+footer{
+    border:1px solid blue;
+	text-align:center;
+	font-size:15px;
+	font-family:Wide Latin;
+	padding:7px;
+	background:#FF9966;
+	background: -webkit-linear-gradient(to left,white,#FF9966);
+	background: -o-linear-gradient(to left,white,#FF9966);
+	background: -moz-linear-gradient(to left,white,#FF9966);
+	background:linear-gradient(to left,white,#FF9966);
+	border-radius:10px;
+}
+
+#sale{
+	color:red;
+	font-size:30px;
+    font-family:Wide Latin;
+}
+.subjects {
+    text-align: justify;
+    display: inline-block;
+}

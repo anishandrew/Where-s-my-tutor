@@ -1,0 +1,89 @@
+<?php
+
+
+
+require_once("db-functions.php"); // database and other functions are written in this file
+require_once("db-connection.php");
+
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+	</head>
+	<body>
+		<header>
+		<div class="header" id="header">
+			<div>
+				<figure>
+					<img id="php_header" src="img/logo.jpg" alt="uc_header"></img>
+				</figure>
+			</div>
+			<div id="ultra">	
+				<h1>Welcome To</h1>
+				<h1>Where's My Tutor</h1>
+				<h2>Pioneer in Tutoring </h2>
+			</div>	
+		</div>	
+	</header><br>
+	<section>
+		<main class="main">
+		
+		<div class="link">
+		<form class="searchtutor">
+		    <table>
+            <tr class="formRow">
+                <td>                <label for="zipCode">Zip Code:</label></td>
+                <td>                <input id="zipCode" name="zipCode" placeholder="Enter your zip code" autofocus type="text" /> </td>
+            </tr>
+             <tr class="formRow">
+                <td>
+                    <label for="subject">Subject</label>
+                </td>
+                <td>
+                <select>
+                 <?php
+				$sql="Select courseId from course";
+				$q=mysql_query($sql);
+				
+				
+				while($row = mysql_fetch_array($q)) 
+				{        
+				echo "<option value='".$row['courseId']."'>".$row['CourseId']."</option>"; 
+				}
+				
+				?>
+				</select>
+                    </td>
+			</tr>
+			<tr>
+			<td></td>
+				<td>
+					<button type="submit">Search</button>
+				</td>
+			</tr>
+            </table>
+		</form>
+		</div>
+		<div class="link"> 
+			<marquee class="scroll" behavior="scroll" direction="up" scrollamount="8">
+				<h3 id="sale">Our Exemplorary tutors</h3>
+				<p>Prof.Ted Mosby <br>Tutoring in Architecture</p><br>
+				<p>Prof. Nisha Karnire<br> Tutoring in Maths</p><br>
+				<p>Prof. Hardik Shah<br> Tutoring Data Analysis</p><br>
+				<p>Prof. Praviin Mandhare<br> Tutoring pHp</p><br>
+				<p>Prof. Saloni Kankaria<br> Tutoring SQL</p><br>
+				<p>Prof. Anish Andrew<br> Tutoring HTML5, CSS3 And App Development</p><br>
+			</marquee>
+		</div>	
+
+			
+		</main>	
+	</section>
+	<footer>
+		copyright &copy; This site is just made for assignment purpose.<br>
+		It is made by Anish , Nisha , Hardik and Saloni
+	</footer>
+	</section>	
+	</body>	
+</html>
